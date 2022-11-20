@@ -154,6 +154,7 @@ import template from './metadataEditor.template.html';
             DateCreated: getDateValue(form, '#txtDateAdded', 'DateCreated'),
             EndDate: getDateValue(form, '#txtEndDate', 'EndDate'),
             ProductionYear: form.querySelector('#txtProductionYear').value,
+            Height: form.querySelector('#txtHeight').value,
             AspectRatio: form.querySelector('#txtOriginalAspectRatio').value,
             Video3DFormat: form.querySelector('#select3dFormat').value,
 
@@ -652,6 +653,12 @@ import template from './metadataEditor.template.html';
             hideElement('#fldPlaceOfBirth');
         }
 
+        if (item.MediaType === 'Video' && item.Type === 'TvChannel') {
+            showElement('#fldHeight');
+        } else {
+            hideElement('#fldHeight');
+        }
+
         if (item.MediaType === 'Video' && item.Type !== 'TvChannel') {
             showElement('#fldOriginalAspectRatio');
         } else {
@@ -829,6 +836,8 @@ import template from './metadataEditor.template.html';
 
         const placeofBirth = item.ProductionLocations && item.ProductionLocations.length ? item.ProductionLocations[0] : '';
         context.querySelector('#txtPlaceOfBirth').value = placeofBirth;
+
+        context.querySelector('#txtHeight').value = item.Height || '';
 
         context.querySelector('#txtOriginalAspectRatio').value = item.AspectRatio || '';
 
