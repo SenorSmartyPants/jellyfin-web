@@ -261,6 +261,10 @@ import ServerConnections from '../ServerConnections';
                 const imgUrl = options.imageSource === 'channel' ? getChannelImageUrl(item, downloadWidth) : getImageUrl(item, downloadWidth);
                 let imageClass = isLargeStyle ? 'listItemImage listItemImage-large' : 'listItemImage';
 
+                if (options.imageSource === 'channel') {
+                    imageClass += ' listItemImage-channel';
+                }
+
                 if (isLargeStyle && layoutManager.tv) {
                     imageClass += ' listItemImage-large-tv';
                 }
@@ -433,11 +437,12 @@ import ServerConnections from '../ServerConnections';
                     html += '<div class="secondary listItemMediaInfo">';
                     html += mediaInfo.getPrimaryMediaInfoHtml(item, {
 
-                        year: false,
-                        container: false,
-                        episodeTitle: false,
-                        criticRating: false,
-                        endsAt: false
+                    year: false,
+                    container: false,
+                    episodeTitle: false,
+                    criticRating: false,
+                    officialRating: false,
+                    endsAt: false
 
                     });
                     html += '</div>';
