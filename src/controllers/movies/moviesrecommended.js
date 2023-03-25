@@ -34,7 +34,7 @@ import Dashboard from '../../scripts/clientUtils';
         const options = {
             IncludeItemTypes: 'Movie',
             Limit: 18,
-            Fields: 'PrimaryImageAspectRatio,MediaSourceCount,BasicSyncInfo',
+            Fields: 'PrimaryImageAspectRatio,MediaSourceCount,BasicSyncInfo,SpecialFeatureCount',
             ParentId: parentId,
             ImageTypeLimit: 1,
             EnableImageTypes: 'Primary,Backdrop,Banner,Thumb',
@@ -68,7 +68,7 @@ import Dashboard from '../../scripts/clientUtils';
             Filters: 'IsResumable',
             Limit: screenWidth >= 1920 ? 5 : screenWidth >= 1600 ? 5 : 3,
             Recursive: true,
-            Fields: 'PrimaryImageAspectRatio,MediaSourceCount,BasicSyncInfo',
+            Fields: 'PrimaryImageAspectRatio,MediaSourceCount,BasicSyncInfo,SpecialFeatureCount',
             CollapseBoxSetItems: false,
             ParentId: parentId,
             ImageTypeLimit: 1,
@@ -161,7 +161,7 @@ import Dashboard from '../../scripts/clientUtils';
             userId: userId,
             categoryLimit: 6,
             ItemLimit: screenWidth >= 1920 ? 8 : screenWidth >= 1600 ? 8 : screenWidth >= 1200 ? 6 : 5,
-            Fields: 'PrimaryImageAspectRatio,MediaSourceCount,BasicSyncInfo',
+            Fields: 'PrimaryImageAspectRatio,MediaSourceCount,BasicSyncInfo,SpecialFeatureCount',
             ImageTypeLimit: 1,
             EnableImageTypes: 'Primary,Backdrop,Banner,Thumb'
         });
