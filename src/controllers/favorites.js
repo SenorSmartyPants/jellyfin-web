@@ -149,7 +149,7 @@ import ServerConnections from '../components/ServerConnections';
                 SortOrder: 'Ascending',
                 Filters: 'IsFavorite',
                 Recursive: true,
-                Fields: 'PrimaryImageAspectRatio,BasicSyncInfo',
+                Fields: 'PrimaryImageAspectRatio,BasicSyncInfo,MediaSourceCount,SpecialFeatureCount',
                 CollapseBoxSetItems: false,
                 ExcludeLocationTypes: 'Virtual',
                 EnableTotalRecordCount: false

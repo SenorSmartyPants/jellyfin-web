@@ -277,7 +277,7 @@ import { appRouter } from '../components/appRouter';
             return apiClient[method](apiClient.getCurrentUserId(), modifyQueryWithFilters(instance, {
                 StartIndex: startIndex,
                 Limit: limit,
-                Fields: 'PrimaryImageAspectRatio,SortName',
+                Fields: 'PrimaryImageAspectRatio,SortName,MediaSourceCount,SpecialFeatureCount',
                 ImageTypeLimit: 1,
                 IncludeItemTypes: params.type === 'MusicArtist' || params.type === 'Person' ? null : params.type,
                 Recursive: true,
@@ -292,7 +292,7 @@ import { appRouter } from '../components/appRouter';
             const query = {
                 StartIndex: startIndex,
                 Limit: limit,
-                Fields: 'PrimaryImageAspectRatio,SortName',
+                Fields: 'PrimaryImageAspectRatio,SortName,MediaSourceCount,SpecialFeatureCount',
                 Recursive: true,
                 parentId: params.parentId,
                 SortBy: sortBy

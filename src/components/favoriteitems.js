@@ -109,7 +109,7 @@ import '../elements/emby-itemscontainer/emby-itemscontainer';
             SortOrder: 'Ascending',
             Filters: 'IsFavorite',
             Recursive: true,
-            Fields: 'PrimaryImageAspectRatio,BasicSyncInfo',
+            Fields: 'PrimaryImageAspectRatio,BasicSyncInfo,MediaSourceCount,SpecialFeatureCount',
             CollapseBoxSetItems: false,
             ExcludeLocationTypes: 'Virtual',
             EnableTotalRecordCount: false
